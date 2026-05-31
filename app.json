@@ -1,25 +1,37 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "Ping",
+    "slug": "ping-couple-app",
     "version": "1.0.0",
     "orientation": "portrait",
+    "scheme": "ping",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "io.applaunch.ping"
     },
     "android": {
+      "package": "io.applaunch.ping",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+        "backgroundColor": "#0F0F1A",
+        "foregroundImage": "./assets/icon.png"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      [
+        "expo-image-picker",
+        { "photosPermission": "Allow Ping to access your photos to share memories." }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
